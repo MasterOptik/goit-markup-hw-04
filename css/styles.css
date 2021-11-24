@@ -177,6 +177,7 @@ border-radius: 4px;
 margin-right: auto;
 margin-left: auto;
 letter-spacing: 0.06em;
+border: var(--accent-color);
 color:var(--fourth-text-color);
 background-color:var(--accent-color);
  cursor: pointer;
