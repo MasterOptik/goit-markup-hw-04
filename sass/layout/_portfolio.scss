@@ -3,18 +3,18 @@
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.main-menu-list{
+.main-menu__list{
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
 }
-.main-menu-buttons{
+.main-menu__buttons{
   display: none;
 }
-.main-menu-item{
+.main-menu__item{
   margin-right: 8px;
 }
-.main-btn{
+.main-menu__main-btn{
   @include font(16px, 1.62, 0.03em, 500 );
   font-family: Roboto;
 border-radius: 4px;
