@@ -2,12 +2,14 @@
   padding-top: 24px;
   padding-bottom: 24px;
  border-bottom: 1px solid #ECECEC;
+
 }
  .header-navigation{
   @extend %align-list;
 }
 .header-container{
   @extend %align-list;
+  
 }
  .header__logo {
   margin-right: 94px;
@@ -54,6 +56,11 @@ bottom: -32px;
   margin-right: 10px;
   fill: currentColor;
 }
+
+.header-contacts{
+  margin-left: auto;
+}
+
 .header-mail-tel{
   display: flex;
 margin-left: auto;
