@@ -350,15 +350,6 @@ body {
   margin: auto;
 }
 
-@media screen and (min-width: 768px) {
-  .container-advantage {
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-}
-
 .advantage-list {
   width: 100%;
   margin-bottom: -30px;
@@ -377,7 +368,7 @@ body {
     display: flex;
     width: 100%;
     margin-bottom: -30px;
-    justify-content: center;
+    flex-wrap: nowrap;
   }
 }
 
@@ -397,9 +388,7 @@ body {
 @media screen and (min-width: 1200px) {
   .advantage__item {
     width: 1200px;
-    display: flex;
     margin-bottom: 30px;
-    justify-content: center;
   }
 }
 
@@ -417,6 +406,12 @@ body {
 @media screen and (min-width: 768px) {
   .advantage__pre-tittle {
     text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantage__pre-tittle {
+    width: 270px;
   }
 }
 
@@ -438,26 +433,80 @@ body {
   border-radius: 4px;
 }
 
+@media screen and (min-width: 1200px) {
+  .advantage__wrap {
+    margin-bottom: 30px;
+    margin-right: 30px;
+    width: 100%;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--second-text-color);
+    box-sizing: content-box;
+    border-radius: 4px;
+  }
+}
+
 .clients {
   background-color: var(--fourth-text-color);
   padding: 94px 0px;
 }
 
 .clients__text {
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   letter-spacing: 0.03em;
   font-weight: 700;
   text-align: center;
   margin-bottom: 50px;
 }
 
+@media screen and (min-width: 1200px) {
+  .clients__text {
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+  }
+}
+
 .clients-list {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .clients-list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .clients-list {
+    flex-wrap: nowrap;
+  }
+}
+
+.clients__item {
+  flex-basis: calc((100% - 30px) / 2);
+  margin-bottom: 30px;
+  margin-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .clients__item {
+    flex-basis: calc((100% - 30px) / 4);
+    margin-right: 30px;
+  }
 }
 
 .clients__link {
-  width: 170px;
+  width: 100%;
   height: 92px;
   border: 1px solid var(--sixth-text-color);
   box-sizing: border-box;
@@ -795,16 +844,46 @@ input[type="text"] {
 .hero {
   padding: 200px 0px;
   height: 600px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/fonImg.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-mobile1x-min.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: var(--first-text-color);
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/hero/hero-mobile2x-min.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url("../images/hero/hero-tablet1x-min.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/hero/hero-tablet2x-min.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: url("../images/hero/hero-desktop1x-min.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/hero/hero-desktop2x-min.jpg");
+  }
+}
+
 .hero__text {
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.6;
   letter-spacing: 0.06em;
   font-weight: 900;
   font-style: normal;
@@ -812,6 +891,15 @@ input[type="text"] {
   text-transform: uppercase;
   margin-bottom: 40px;
   color: var(--fourth-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__text {
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    font-weight: 900;
+  }
 }
 
 .hero-btn {
@@ -942,6 +1030,7 @@ img {
 
 .main-menu__list {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 50px;
   justify-content: center;
 }
@@ -952,6 +1041,8 @@ img {
 
 .main-menu__item {
   margin-right: 8px;
+  flex-basis: calc(100% / 2- 30px);
+  margin-bottom: 15px;
 }
 
 .main-menu__main-btn {

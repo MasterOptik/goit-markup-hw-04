@@ -3,16 +3,40 @@
   padding: 94px 0px;
  }
  .clients__text{
-   @include font(36px, 1.17, 0.03em, 700 );
+   @include font(28px, 1.18, 0.03em, 700 );
 text-align: center;
 margin-bottom: 50px;
+@media screen and (min-width: 1200px){
+  @include font(36px, 1.17, 0.03em, 700 )
+}
  }
  .clients-list{
-   display: flex;
+ width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+@media screen and (min-width: 768px){
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  justify-content: center;
+  @media screen and (min-width: 1200px){
+    flex-wrap: nowrap;
+  }
+}
+  
  }
- 
+.clients__item{
+flex-basis: calc((100% - 30px) / 2);
+margin-bottom: 30px;
+margin-right: 15px;
+@media screen and (min-width: 768px){
+  flex-basis: calc((100% - 30px) / 4);
+  margin-right: 30px;
+}
+}
  .clients__link{
-   width: 170px;
+  width: 100%;
     height: 92px;
     border: 1px solid var(--sixth-text-color);
 box-sizing: border-box;
