@@ -22,7 +22,12 @@
 }
 .header-list{
   display: flex;
-}
+@media (max-width: 768px){
+display:none;
+}}
+
+
+
 .header-list__item{
   margin-right: 52px;
   &:last-child{
@@ -51,6 +56,8 @@ position: absolute;
 left: 0;
 bottom: -32px;
 }
+
+
 .header-mail-tel__mail-icon{
   @extend %align-list;
   margin-right: 10px;
@@ -64,6 +71,19 @@ bottom: -32px;
 .header-mail-tel{
   display: flex;
 margin-left: auto;
+@media (max-width: 768px){
+display:none;}
+ @media (min-width: 768px){
+display: block;
+ margin-left: 84px;
+ }
+ @media (min-width: 1200px){
+   display: flex;
+margin-left: auto;
+ }
+}
+.header-mail-tel__mail{
+  margin-bottom: 10px;
 }
 .header-mail-tel__tel-icon{
 @extend %align-list;
@@ -87,5 +107,76 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-mail-tel__mail{
-  margin-right: 52px;
+  @media (min-width: 1200px){
+   margin-right: 52px;}
+}
+.open-menu-btn{
+  display: inline-flex;
+background-color: transparent;
+border: none;
+margin-left: auto;
+@media (min-width: 768px){
+  display: none;
+}}
+.mob-menu{
+  position: fixed;
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 5;
+    padding-top: 48px;
+    padding-bottom: 48px;}
+    .container {
+        display: flex;
+        flex-direction: column;
+         justify-content: space-between;
+        height: 100%;
+}
+.close-menu-btn{
+  margin-left: auto;
+ display: block;;
+   border: none;
+   background-color: transparent;
+}
+.mob-menu-list {
+  justify-content: center;
+}
+.mob-menu-list__item{
+  margin-bottom: 32px;
+  &:not(:last-child) {
+        margin-bottom: 32px;
+}}
+.mob-menu-list__link{
+  @include font(40px, 1.18, 0.02em, 500 );
+  color: #212121;
+}
+
+
+.menu-contacts__tel{
+  @include font(34px, 1.18, 0.02em, 500 );
+  margin-bottom:32px;
+}
+.menu-contacts__tel-link{
+  color: #2196F3;
+}
+.menu-contacts__mail{
+ @include font(24px, 1.17, 0.02em, 500 );
+ margin-bottom: 62px; 
+}
+.menu-contacts__mail-link{
+  color: #757575;
+}
+.menu-networks{
+  display: flex;
+  justify-content: center
+}
+.menu-networks__item{
+   @include font(18px, 1.2, 0.02em, 500 );
+   margin-right: 20px;
+   &:not(:last-child) {
+        margin-bottom: 20px;
+}}
+.menu-networks__link{
+  color: #2196F3;
 }
