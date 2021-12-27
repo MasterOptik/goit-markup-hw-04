@@ -1,13 +1,14 @@
 .main-menu{
   background-color:var(--fourth-text-color);
-  padding-top: 94px;
+  padding-top: 60px;
   padding-bottom: 94px;
 }
 .main-menu__list{
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 50px;
-   justify-content: center;
+  @media (min-width: 768px){
+   justify-content: center;}
 }
 .main-menu__buttons{
   display: none;
