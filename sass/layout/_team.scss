@@ -1,15 +1,19 @@
 .team{
   background-color: var(--second-text-color);
-  padding: 94px 0px;
+   padding: 60px 0px;
+  @media screen and (min-width: 1200px){
+    padding: 94px 0px;
+  }
 }
  .team__text{
+   margin-bottom: 30px;
    @include font(28px, 1.18, 0.03em, 700 );
-margin-bottom: 50px;
 align-items: center;
 text-align: center;
 color:var(--main-tittle-color);
 @media screen and (min-width: 1200px){
   @include font(36px, 1.17, 0.03em, 700 );
+  margin-bottom: 50px;
 }
 }
 img{

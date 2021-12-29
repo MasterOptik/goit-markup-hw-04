@@ -1,9 +1,11 @@
 .advantage{
   background-color: var(--fourth-text-color);
-padding-top: 94px ;
+padding: 60px ;
 margin: auto;
-
-}
+@media screen and (min-width: 1200px){
+padding: 94px;
+margin: auto;
+}}
 
   
 

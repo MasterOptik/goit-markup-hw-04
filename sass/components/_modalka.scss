@@ -147,17 +147,23 @@ background-color:#188CE8;
 .modal__check-text{
   display: flex;
   font-family: Roboto;
-  @include font(14px, 1.71, 0.03em, 400 );
+  @include font(12px, 1.71, 0.03em, 400 );
 color:var(--tittle-text-color);
 align-items: center;
+@media screen and (min-width: 1200px){
+  @include font(14px, 1.71, 0.03em, 400 );
+}
 }
 .modal__link{
   display: block;
   font-family: Roboto;
-  @include font(14px, 1.71, 0.03em, 400 );
+  @include font(12px, 1.71, 0.03em, 400 );
 color:var(--accent-color);
 margin-left: 5px;
 text-decoration-skip-ink: none;
+@media screen and (min-width: 1200px){
+  @include font(14px, 1.71, 0.03em, 400 );
+}
 }
 .modal__span{
   width: 16px;
